@@ -1,5 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ProductService } from './service/product.service'
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,7 @@ export class AppComponent {
 
 
 
-  constructor( public productService: ProductService) {
+  constructor( public productService: ProductService, public dialog: MatDialog) {
   }
 
 
@@ -26,5 +28,16 @@ export class AppComponent {
       .then(data => this.productService.setProducts(data.products));
   }
 
-}
+  openDialog(){
+      const dialogRef = this.dialog.open(ProductDetailComponent, {
+        width: '250px',
+        data: {},
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+      });
+    }
+  }
+  
 

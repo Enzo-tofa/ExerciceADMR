@@ -1,0 +1,26 @@
+h2 {
+    text-align: center;
+    padding: 25px;
+}
+
+#product {
+    text-align: center;
+    border: 1px black solid;
+    height: 425px;
+    max-width: 500px;
+    padding: 15px;
+    margin: 23px;
+}
+
+mat-grid-tile :hover {
+    background-color: grey;
+}
+
+#thumbnails img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#productDescription {
+    padding: 15px;
+}

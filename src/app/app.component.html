@@ -1,16 +1,18 @@
-<div>
-    <ol>
-        <h3>Liste des produits</h3>
+<div class="container">
+    <h2>Liste des produits</h2>
 
 
-        <mat-grid-list cols="3" rowHeight="1:1">
-            <mat-grid-tile *ngFor="let p of productService.getProducts()|async">
-                <div class="container">
-                    <div><img [src]="p.images[1]" /></div>
+    <mat-grid-list cols="3" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let p of productService.getProducts()|async" (click)="openDialog()">
+            <div class="container" id="product">
+                <div id="thumbnails">
+                    <img [src]="p.images[0]" />
+                </div>
+                <div id="productDescription">
                     {{p.title}} <br> {{p.stock}} en stock <br> {{p.description}} <br> {{p.price}} €
                 </div>
+            </div>
 
-            </mat-grid-tile>
-        </mat-grid-list>
-    </ol>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>
