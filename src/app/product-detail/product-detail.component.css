@@ -3,6 +3,8 @@ div.flex {
 }
 
 div.center {
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
 }
 
