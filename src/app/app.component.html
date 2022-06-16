@@ -3,13 +3,13 @@
 
 
     <mat-grid-list cols="3" rowHeight="1:1">
-        <mat-grid-tile *ngFor="let p of productService.getProducts()|async" (click)="openDialog()">
-            <div class="container" id="product">
-                <div id="thumbnails">
-                    <img [src]="p.images[0]" />
+        <mat-grid-tile *ngFor="let p of productService.getProducts()|async" (click)="openDialog(p)">
+            <div class="container" class="product">
+                <div>
+                    <img class="thumbnail" [src]="p.thumbnail" />
                 </div>
-                <div id="productDescription">
-                    {{p.title}} <br> {{p.stock}} en stock <br> {{p.description}} <br> {{p.price}} €
+                <div class="productDescription">
+                    {{p.title}}<br> {{p.price}} € <br>{{p.stock}} en stock <br> {{p.description}}
                 </div>
             </div>
 

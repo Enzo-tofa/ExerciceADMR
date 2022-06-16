@@ -1,0 +1,22 @@
+div.flex {
+    display: flex;
+}
+
+div.center {
+    text-align: center;
+}
+
+img.big {
+    padding: 5px;
+    max-width: 1000px;
+    max-height: 500px;
+    margin: auto;
+}
+
+img.small {
+    padding: 5px;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

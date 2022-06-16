@@ -1,1 +1,14 @@
-<p>product-detail works!</p>
+<div class="flex">
+    <div>
+        <div class="center">
+            <img class="big" src="{{data.images[0]}}" alt="First pic">
+        </div>
+        <div class="flex">
+            <div> <img class="small" src="{{data.images[1]}}" alt="Second pic"></div>
+            <div> <img class="small" src="{{data.images[2]}}" alt="Third pic"></div>
+        </div>
+    </div>
+    <div class="center">
+        <h3>{{data.title}}</h3> <br> <br>{{data.rating}}/5 <br> {{data.price}} € <br> {{data.stock}} en stock <br> {{data.description}}
+    </div>
+</div>

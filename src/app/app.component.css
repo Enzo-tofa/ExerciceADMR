@@ -3,7 +3,7 @@ h2 {
     padding: 25px;
 }
 
-#product {
+div.product {
     text-align: center;
     border: 1px black solid;
     height: 425px;
@@ -16,11 +16,11 @@ mat-grid-tile :hover {
     background-color: grey;
 }
 
-#thumbnails img {
-    max-width: 250px;
-    max-height: 250px;
+img.thumbnail {
+    max-width: 350px;
+    height: 200px;
 }
 
-#productDescription {
+div.productDescription {
     padding: 15px;
 }

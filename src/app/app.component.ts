@@ -28,10 +28,10 @@ export class AppComponent {
       .then(data => this.productService.setProducts(data.products));
   }
 
-  openDialog(){
+  openDialog(product:Product){
       const dialogRef = this.dialog.open(ProductDetailComponent, {
-        width: '250px',
-        data: {},
+        width: '2000px',
+        data: {title : product.title, description : product.description, price : product.price, rating: product.rating, stock: product.stock, images:product.images},
       });
   
       dialogRef.afterClosed().subscribe(result => {
@@ -39,5 +39,20 @@ export class AppComponent {
       });
     }
   }
+
+
+  export interface Product {
+    id: number,
+    title: string,
+    description: string,
+    price: string,
+    discountPercentage: number,
+    rating: number,
+    stock: number,
+    brand: string,
+    category: string,
+    thumbnail: string,
+    images: [string]
+}
   
 
