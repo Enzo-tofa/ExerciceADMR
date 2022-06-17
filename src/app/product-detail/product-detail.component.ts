@@ -14,7 +14,9 @@ export class ProductDetailComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {}
 
-
+    buy(){
+      this.dialogRef.close();
+    }
 
   onNoClick(): void {
     this.dialogRef.close();
